@@ -1,0 +1,1038 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		951745972E707C8000911336 /* SunbreakMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9517458C2E707C8000911336 /* SunbreakMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		951745A12E710DBD00911336 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517458E2E707C8000911336 /* DeviceActivity.framework */; };
+		951745A22E710DBD00911336 /* DeviceActivity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9517458E2E707C8000911336 /* DeviceActivity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		951745BD2E75DB2200911336 /* SunbreakShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 951745AF2E75DB2200911336 /* SunbreakShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		951745C52E75E0B600911336 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951745B02E75DB2200911336 /* UniformTypeIdentifiers.framework */; };
+		951745C62E75E0B600911336 /* UniformTypeIdentifiers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 951745B02E75DB2200911336 /* UniformTypeIdentifiers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1000001 /* SunbreakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001 /* SunbreakApp.swift */; };
+		A1000002 /* Views/ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000002 /* Views/ContentView.swift */; };
+		A1000004 /* Views/OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000004 /* Views/OnboardingView.swift */; };
+		A1000006 /* Views/AppsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000006 /* Views/AppsSelectionView.swift */; };
+		A1000007 /* Views/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000007 /* Views/SettingsView.swift */; };
+		A1000010 /* Views/AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000010 /* Views/AboutView.swift */; };
+		A1000011 /* Services/ScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000011 /* Services/ScheduleManager.swift */; };
+		A1000013 /* Services/LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000013 /* Services/LocationManager.swift */; };
+		A1000014 /* Services/ScreenTimeAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000014 /* Services/ScreenTimeAuthManager.swift */; };
+		A1000016 /* Utils/iOSCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000016 /* Utils/iOSCompatibility.swift */; };
+		A1000017 /* ../Shared/Models/UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000017 /* ../Shared/Models/UserPreferences.swift */; };
+		A1000018 /* ../Shared/Models/SelectionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000018 /* ../Shared/Models/SelectionRecord.swift */; };
+		A1000019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000019 /* Assets.xcassets */; };
+		A1000020 /* ../SunbreakMonitor/DeviceActivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000020 /* ../SunbreakMonitor/DeviceActivityMonitor.swift */; };
+		A1000024 /* ScheduleManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000024 /* ScheduleManagerTests.swift */; };
+		A1000025 /* ScreenTimeIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000025 /* ScreenTimeIntegrationTests.swift */; };
+		A1000028 /* SwiftDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000028 /* SwiftDataModelTests.swift */; };
+		A1000029 /* TestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000029 /* TestUtilities.swift */; };
+		A1000030 /* OnboardingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000030 /* OnboardingUITests.swift */; };
+		A1000031 /* ../Shared/Models/EntitlementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000031 /* ../Shared/Models/EntitlementState.swift */; };
+		A1000032 /* ../Shared/Models/UnlockState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000032 /* ../Shared/Models/UnlockState.swift */; };
+		A1000033 /* Utils/KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000033 /* Utils/KeychainHelper.swift */; };
+		A1000034 /* Utils/TimezoneHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000034 /* Utils/TimezoneHelper.swift */; };
+		A1000035 /* Utils/ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000035 /* Utils/ErrorHandler.swift */; };
+		A1000036 /* Utils/Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000036 /* Utils/Logger.swift */; };
+		A1000037 /* Views/DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000037 /* Views/DashboardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		951745952E707C8000911336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = G1000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9517458B2E707C8000911336;
+			remoteInfo = SunbreakMonitor;
+		};
+		951745BB2E75DB2200911336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = G1000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 951745AE2E75DB2200911336;
+			remoteInfo = SunbreakShield;
+		};
+		F1000015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = G1000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1000001;
+			remoteInfo = Sunbreak;
+		};
+		F1000016 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = G1000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1000001;
+			remoteInfo = Sunbreak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		951745982E707C8000911336 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				951745BD2E75DB2200911336 /* SunbreakShield.appex in Embed Foundation Extensions */,
+				951745972E707C8000911336 /* SunbreakMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951745A32E710DBD00911336 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				951745A22E710DBD00911336 /* DeviceActivity.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951745C72E75E0B600911336 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				951745C62E75E0B600911336 /* UniformTypeIdentifiers.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		951745872E6C7CBD00911336 /* Sunbreak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sunbreak.entitlements; sourceTree = "<group>"; };
+		9517458C2E707C8000911336 /* SunbreakMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SunbreakMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9517458E2E707C8000911336 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		951745AF2E75DB2200911336 /* SunbreakShield.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SunbreakShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		951745B02E75DB2200911336 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		B1000001 /* SunbreakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunbreakApp.swift; sourceTree = "<group>"; };
+		B1000002 /* Views/ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ContentView.swift; sourceTree = "<group>"; };
+		B1000004 /* Views/OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/OnboardingView.swift; sourceTree = "<group>"; };
+		B1000006 /* Views/AppsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AppsSelectionView.swift; sourceTree = "<group>"; };
+		B1000007 /* Views/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
+		B1000010 /* Views/AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AboutView.swift; sourceTree = "<group>"; };
+		B1000011 /* Services/ScheduleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ScheduleManager.swift; sourceTree = "<group>"; };
+		B1000013 /* Services/LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/LocationManager.swift; sourceTree = "<group>"; };
+		B1000014 /* Services/ScreenTimeAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ScreenTimeAuthManager.swift; sourceTree = "<group>"; };
+		B1000016 /* Utils/iOSCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils/iOSCompatibility.swift; sourceTree = "<group>"; };
+		B1000017 /* ../Shared/Models/UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Shared/Models/UserPreferences.swift; sourceTree = "<group>"; };
+		B1000018 /* ../Shared/Models/SelectionRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Shared/Models/SelectionRecord.swift; sourceTree = "<group>"; };
+		B1000019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1000020 /* ../SunbreakMonitor/DeviceActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../SunbreakMonitor/DeviceActivityMonitor.swift; sourceTree = "<group>"; };
+		B1000024 /* ScheduleManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleManagerTests.swift; sourceTree = "<group>"; };
+		B1000025 /* ScreenTimeIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeIntegrationTests.swift; sourceTree = "<group>"; };
+		B1000028 /* SwiftDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModelTests.swift; sourceTree = "<group>"; };
+		B1000029 /* TestUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtilities.swift; sourceTree = "<group>"; };
+		B1000030 /* OnboardingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUITests.swift; sourceTree = "<group>"; };
+		B1000031 /* ../Shared/Models/EntitlementState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Shared/Models/EntitlementState.swift; sourceTree = "<group>"; };
+		B1000032 /* ../Shared/Models/UnlockState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../Shared/Models/UnlockState.swift; sourceTree = "<group>"; };
+		B1000033 /* Utils/KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils/KeychainHelper.swift; sourceTree = "<group>"; };
+		B1000034 /* Utils/TimezoneHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils/TimezoneHelper.swift; sourceTree = "<group>"; };
+		B1000035 /* Utils/ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils/ErrorHandler.swift; sourceTree = "<group>"; };
+		B1000036 /* Utils/Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils/Logger.swift; sourceTree = "<group>"; };
+		B1000037 /* Views/DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/DashboardView.swift; sourceTree = "<group>"; };
+		C1000001 /* Sunbreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunbreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1000002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1000003 /* SunbreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunbreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1000004 /* SunbreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunbreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9517459B2E707C8000911336 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9517458B2E707C8000911336 /* SunbreakMonitor */;
+		};
+		951745BE2E75DB2200911336 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 951745AE2E75DB2200911336 /* SunbreakShield */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		951745902E707C8000911336 /* SunbreakMonitor */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9517459B2E707C8000911336 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SunbreakMonitor; sourceTree = "<group>"; };
+		951745B22E75DB2200911336 /* SunbreakShield */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (951745BE2E75DB2200911336 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SunbreakShield; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		951745892E707C8000911336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951745A12E710DBD00911336 /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951745AC2E75DB2200911336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951745C52E75E0B600911336 /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9517458D2E707C8000911336 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9517458E2E707C8000911336 /* DeviceActivity.framework */,
+				951745B02E75DB2200911336 /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1000001 = {
+			isa = PBXGroup;
+			children = (
+				E1000002 /* Sunbreak */,
+				E1000004 /* SunbreakTests */,
+				E1000005 /* SunbreakUITests */,
+				951745902E707C8000911336 /* SunbreakMonitor */,
+				951745B22E75DB2200911336 /* SunbreakShield */,
+				9517458D2E707C8000911336 /* Frameworks */,
+				E1000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1000002 /* Sunbreak */ = {
+			isa = PBXGroup;
+			children = (
+				951745872E6C7CBD00911336 /* Sunbreak.entitlements */,
+				B1000001 /* SunbreakApp.swift */,
+				B1000002 /* Views/ContentView.swift */,
+				B1000004 /* Views/OnboardingView.swift */,
+				B1000006 /* Views/AppsSelectionView.swift */,
+				B1000007 /* Views/SettingsView.swift */,
+				B1000037 /* Views/DashboardView.swift */,
+				B1000010 /* Views/AboutView.swift */,
+				B1000011 /* Services/ScheduleManager.swift */,
+				B1000013 /* Services/LocationManager.swift */,
+				B1000014 /* Services/ScreenTimeAuthManager.swift */,
+				B1000016 /* Utils/iOSCompatibility.swift */,
+				B1000017 /* ../Shared/Models/UserPreferences.swift */,
+				B1000018 /* ../Shared/Models/SelectionRecord.swift */,
+				B1000031 /* ../Shared/Models/EntitlementState.swift */,
+				B1000032 /* ../Shared/Models/UnlockState.swift */,
+				B1000033 /* Utils/KeychainHelper.swift */,
+				B1000034 /* Utils/TimezoneHelper.swift */,
+				B1000035 /* Utils/ErrorHandler.swift */,
+				B1000036 /* Utils/Logger.swift */,
+				B1000019 /* Assets.xcassets */,
+				B1000020 /* ../SunbreakMonitor/DeviceActivityMonitor.swift */,
+				C1000002 /* Info.plist */,
+			);
+			path = Sunbreak;
+			sourceTree = "<group>";
+		};
+		E1000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1000001 /* Sunbreak.app */,
+				C1000003 /* SunbreakTests.xctest */,
+				C1000004 /* SunbreakUITests.xctest */,
+				9517458C2E707C8000911336 /* SunbreakMonitor.appex */,
+				951745AF2E75DB2200911336 /* SunbreakShield.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1000004 /* SunbreakTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1000024 /* ScheduleManagerTests.swift */,
+				B1000025 /* ScreenTimeIntegrationTests.swift */,
+				B1000028 /* SwiftDataModelTests.swift */,
+				B1000029 /* TestUtilities.swift */,
+			);
+			path = SunbreakTests;
+			sourceTree = "<group>";
+		};
+		E1000005 /* SunbreakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B1000030 /* OnboardingUITests.swift */,
+			);
+			path = SunbreakUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9517458B2E707C8000911336 /* SunbreakMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9517459C2E707C8000911336 /* Build configuration list for PBXNativeTarget "SunbreakMonitor" */;
+			buildPhases = (
+				951745882E707C8000911336 /* Sources */,
+				951745892E707C8000911336 /* Frameworks */,
+				9517458A2E707C8000911336 /* Resources */,
+				951745A32E710DBD00911336 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				951745902E707C8000911336 /* SunbreakMonitor */,
+			);
+			name = SunbreakMonitor;
+			packageProductDependencies = (
+			);
+			productName = SunbreakMonitor;
+			productReference = 9517458C2E707C8000911336 /* SunbreakMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		951745AE2E75DB2200911336 /* SunbreakShield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 951745BF2E75DB2200911336 /* Build configuration list for PBXNativeTarget "SunbreakShield" */;
+			buildPhases = (
+				951745AB2E75DB2200911336 /* Sources */,
+				951745AC2E75DB2200911336 /* Frameworks */,
+				951745AD2E75DB2200911336 /* Resources */,
+				951745C72E75E0B600911336 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				951745B22E75DB2200911336 /* SunbreakShield */,
+			);
+			name = SunbreakShield;
+			packageProductDependencies = (
+			);
+			productName = SunbreakShield;
+			productReference = 951745AF2E75DB2200911336 /* SunbreakShield.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F1000001 /* Sunbreak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1000002 /* Build configuration list for PBXNativeTarget "Sunbreak" */;
+			buildPhases = (
+				F1000003 /* Sources */,
+				D1000001 /* Frameworks */,
+				F1000004 /* Resources */,
+				951745982E707C8000911336 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				951745962E707C8000911336 /* PBXTargetDependency */,
+				951745BC2E75DB2200911336 /* PBXTargetDependency */,
+			);
+			name = Sunbreak;
+			productName = Sunbreak;
+			productReference = C1000001 /* Sunbreak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1000005 /* SunbreakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1000006 /* Build configuration list for PBXNativeTarget "SunbreakTests" */;
+			buildPhases = (
+				F1000007 /* Sources */,
+				D1000002 /* Frameworks */,
+				F1000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1000009 /* PBXTargetDependency */,
+			);
+			name = SunbreakTests;
+			productName = SunbreakTests;
+			productReference = C1000003 /* SunbreakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F1000010 /* SunbreakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1000011 /* Build configuration list for PBXNativeTarget "SunbreakUITests" */;
+			buildPhases = (
+				F1000012 /* Sources */,
+				D1000003 /* Frameworks */,
+				F1000013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1000014 /* PBXTargetDependency */,
+			);
+			name = SunbreakUITests;
+			productName = SunbreakUITests;
+			productReference = C1000004 /* SunbreakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		G1000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					9517458B2E707C8000911336 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					951745AE2E75DB2200911336 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					F1000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					F1000005 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = F1000001;
+					};
+					F1000010 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = F1000001;
+					};
+				};
+			};
+			buildConfigurationList = G1000002 /* Build configuration list for PBXProject "Sunbreak" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1000001;
+			productRefGroup = E1000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1000001 /* Sunbreak */,
+				F1000005 /* SunbreakTests */,
+				F1000010 /* SunbreakUITests */,
+				9517458B2E707C8000911336 /* SunbreakMonitor */,
+				951745AE2E75DB2200911336 /* SunbreakShield */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9517458A2E707C8000911336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951745AD2E75DB2200911336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000019 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1000013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		951745882E707C8000911336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951745AB2E75DB2200911336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001 /* SunbreakApp.swift in Sources */,
+				A1000002 /* Views/ContentView.swift in Sources */,
+				A1000004 /* Views/OnboardingView.swift in Sources */,
+				A1000006 /* Views/AppsSelectionView.swift in Sources */,
+				A1000007 /* Views/SettingsView.swift in Sources */,
+				A1000037 /* Views/DashboardView.swift in Sources */,
+				A1000010 /* Views/AboutView.swift in Sources */,
+				A1000011 /* Services/ScheduleManager.swift in Sources */,
+				A1000013 /* Services/LocationManager.swift in Sources */,
+				A1000014 /* Services/ScreenTimeAuthManager.swift in Sources */,
+				A1000016 /* Utils/iOSCompatibility.swift in Sources */,
+				A1000017 /* ../Shared/Models/UserPreferences.swift in Sources */,
+				A1000018 /* ../Shared/Models/SelectionRecord.swift in Sources */,
+				A1000031 /* ../Shared/Models/EntitlementState.swift in Sources */,
+				A1000032 /* ../Shared/Models/UnlockState.swift in Sources */,
+				A1000033 /* Utils/KeychainHelper.swift in Sources */,
+				A1000034 /* Utils/TimezoneHelper.swift in Sources */,
+				A1000035 /* Utils/ErrorHandler.swift in Sources */,
+				A1000036 /* Utils/Logger.swift in Sources */,
+				A1000020 /* ../SunbreakMonitor/DeviceActivityMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000024 /* ScheduleManagerTests.swift in Sources */,
+				A1000025 /* ScreenTimeIntegrationTests.swift in Sources */,
+				A1000028 /* SwiftDataModelTests.swift in Sources */,
+				A1000029 /* TestUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1000012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000030 /* OnboardingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		951745962E707C8000911336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9517458B2E707C8000911336 /* SunbreakMonitor */;
+			targetProxy = 951745952E707C8000911336 /* PBXContainerItemProxy */;
+		};
+		951745BC2E75DB2200911336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 951745AE2E75DB2200911336 /* SunbreakShield */;
+			targetProxy = 951745BB2E75DB2200911336 /* PBXContainerItemProxy */;
+		};
+		F1000009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1000001 /* Sunbreak */;
+			targetProxy = F1000015 /* PBXContainerItemProxy */;
+		};
+		F1000014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1000001 /* Sunbreak */;
+			targetProxy = F1000016 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		951745992E707C8000911336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = SunbreakMonitor/SunbreakMonitor.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SunbreakMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SunbreakMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9517459A2E707C8000911336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = SunbreakMonitor/SunbreakMonitor.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SunbreakMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SunbreakMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		951745C02E75DB2200911336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = SunbreakShield/SunbreakShield.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SunbreakShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SunbreakShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		951745C12E75DB2200911336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = SunbreakShield/SunbreakShield.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SunbreakShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SunbreakShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		H1000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		H1000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		H1000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sunbreak/Sunbreak.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sunbreak/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sunbreak needs camera access to verify daylight conditions.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sunbreak needs your location to calculate sunrise times.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		H1000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sunbreak/Sunbreak.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sunbreak/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sunbreak needs camera access to verify daylight conditions.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sunbreak needs your location to calculate sunrise times.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		H1000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunbreak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sunbreak";
+			};
+			name = Debug;
+		};
+		H1000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunbreak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sunbreak";
+			};
+			name = Release;
+		};
+		H1000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sunbreak;
+			};
+			name = Debug;
+		};
+		H1000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU395NH3KL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunbreak.app.SunbreakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sunbreak;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9517459C2E707C8000911336 /* Build configuration list for PBXNativeTarget "SunbreakMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951745992E707C8000911336 /* Debug */,
+				9517459A2E707C8000911336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		951745BF2E75DB2200911336 /* Build configuration list for PBXNativeTarget "SunbreakShield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951745C02E75DB2200911336 /* Debug */,
+				951745C12E75DB2200911336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1000002 /* Build configuration list for PBXNativeTarget "Sunbreak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				H1000003 /* Debug */,
+				H1000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1000006 /* Build configuration list for PBXNativeTarget "SunbreakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				H1000005 /* Debug */,
+				H1000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1000011 /* Build configuration list for PBXNativeTarget "SunbreakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				H1000007 /* Debug */,
+				H1000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		G1000002 /* Build configuration list for PBXProject "Sunbreak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				H1000001 /* Debug */,
+				H1000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = G1000001 /* Project object */;
+}
