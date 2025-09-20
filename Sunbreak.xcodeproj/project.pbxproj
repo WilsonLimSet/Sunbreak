@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		951745972E707C8000911336 /* SunbreakMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9517458C2E707C8000911336 /* SunbreakMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		951745A12E710DBD00911336 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517458E2E707C8000911336 /* DeviceActivity.framework */; };
-		951745A22E710DBD00911336 /* DeviceActivity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9517458E2E707C8000911336 /* DeviceActivity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		951745A12E710DBD00911336 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517458E2E707C8000911336 /* DeviceActivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		951745BD2E75DB2200911336 /* SunbreakShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 951745AF2E75DB2200911336 /* SunbreakShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		951745C52E75E0B600911336 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951745B02E75DB2200911336 /* UniformTypeIdentifiers.framework */; };
-		951745C62E75E0B600911336 /* UniformTypeIdentifiers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 951745B02E75DB2200911336 /* UniformTypeIdentifiers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		951745C52E75E0B600911336 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951745B02E75DB2200911336 /* UniformTypeIdentifiers.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A1000001 /* SunbreakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001 /* SunbreakApp.swift */; };
 		A1000002 /* Views/ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000002 /* Views/ContentView.swift */; };
 		A1000004 /* Views/OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000004 /* Views/OnboardingView.swift */; };
@@ -83,28 +81,6 @@
 				951745972E707C8000911336 /* SunbreakMonitor.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		951745A32E710DBD00911336 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				951745A22E710DBD00911336 /* DeviceActivity.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		951745C72E75E0B600911336 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				951745C62E75E0B600911336 /* UniformTypeIdentifiers.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -303,7 +279,6 @@
 				951745882E707C8000911336 /* Sources */,
 				951745892E707C8000911336 /* Frameworks */,
 				9517458A2E707C8000911336 /* Resources */,
-				951745A32E710DBD00911336 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,7 +301,6 @@
 				951745AB2E75DB2200911336 /* Sources */,
 				951745AC2E75DB2200911336 /* Frameworks */,
 				951745AD2E75DB2200911336 /* Resources */,
-				951745C72E75E0B600911336 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
