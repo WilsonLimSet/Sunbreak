@@ -14,7 +14,10 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyReduced
         authorizationStatus = manager.authorizationStatus
-        
+
+        // Check if user has set manual sunrise time
+        loadSunriseTimes()
+
         // Listen for timezone changes
         NotificationCenter.default.addObserver(
             self,
@@ -22,6 +25,46 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             name: .timezoneChanged,
             object: nil
         )
+    }
+
+    private func loadSunriseTimes() {
+        let userDefaults = UserDefaults(suiteName: "group.com.sunbreak.shared")
+        let useManualSunrise = userDefaults?.bool(forKey: "useManualSunrise") ?? false
+
+        if useManualSunrise, let manualTime = userDefaults?.object(forKey: "manualSunriseTime") as? Date {
+            // Use manual sunrise time
+            setManualSunriseTimes(manualTime)
+        } else {
+            // Set default or calculate from location
+            setDefaultSunTimes()
+        }
+    }
+
+    private func setManualSunriseTimes(_ manualSunrise: Date) {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone.current
+
+        let now = Date()
+        let components = calendar.dateComponents([.hour, .minute], from: manualSunrise)
+
+        var sunriseComponents = calendar.dateComponents([.year, .month, .day], from: now)
+        sunriseComponents.hour = components.hour
+        sunriseComponents.minute = components.minute
+
+        sunrise = calendar.date(from: sunriseComponents)
+
+        // Set sunset to 12 hours after sunrise as approximation
+        var sunsetComponents = sunriseComponents
+        sunsetComponents.hour = (components.hour ?? 7) + 12
+        sunset = calendar.date(from: sunsetComponents)
+
+        // Save to UserDefaults
+        let userDefaults = UserDefaults(suiteName: "group.com.sunbreak.shared")
+        userDefaults?.set(sunrise, forKey: "sunrise")
+        userDefaults?.set(sunset, forKey: "sunset")
+        userDefaults?.set(calendar.timeZone.identifier, forKey: "sunTimesTimeZone")
+
+        Logger.shared.log("[LocationManager] Using manual sunrise: \(sunrise?.description ?? "nil")")
     }
     
     @objc private func timezoneChanged() {
@@ -38,9 +81,17 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         authorizationStatus = manager.authorizationStatus
-        
+
+        let userDefaults = UserDefaults(suiteName: "group.com.sunbreak.shared")
+        let useManualSunrise = userDefaults?.bool(forKey: "useManualSunrise") ?? false
+
         if authorizationStatus == .authorizedWhenInUse {
+            // Clear manual sunrise preference when location is granted
+            userDefaults?.set(false, forKey: "useManualSunrise")
             manager.requestLocation()
+        } else if !useManualSunrise {
+            // If not using manual and no location, load times
+            loadSunriseTimes()
         }
     }
     
@@ -195,21 +246,17 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         return (sunriseTime, sunsetTime)
     }
     
-    // Add function to handle timezone changes
+    // Add function to handle timezone changes or manual sunrise updates
     func handleTimezoneChange() {
         let userDefaults = UserDefaults(suiteName: "group.com.sunbreak.shared")
         let currentTimeZone = TimeZone.current.identifier
         let savedTimeZone = userDefaults?.string(forKey: "sunTimesTimeZone")
-        
+
         if savedTimeZone != currentTimeZone {
             Logger.shared.log("[LocationManager] Timezone changed from \(savedTimeZone ?? "unknown") to \(currentTimeZone)")
-            
-            // Recalculate sun times for new timezone
-            if let location = location {
-                calculateSunTimes(for: location)
-            } else {
-                setDefaultSunTimes()
-            }
         }
+
+        // Reload sunrise times based on current settings
+        loadSunriseTimes()
     }
 }

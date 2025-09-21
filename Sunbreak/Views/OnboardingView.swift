@@ -106,9 +106,9 @@ struct OnboardingView: View {
     
     private func canProceedToNextStep() -> Bool {
         switch currentStep {
-        case 1: // Location step
-            return locationManager.authorizationStatus == .authorizedWhenInUse
-        case 3: // Screen Time step  
+        case 1: // Location step - Allow skipping
+            return true // Users can skip location permission
+        case 3: // Screen Time step
             return authManager.isAuthorized
         case 4: // App Selection step
             return !selection.applicationTokens.isEmpty
@@ -613,87 +613,114 @@ struct ScheduleStep: View {
 struct LocationStep: View {
     @ObservedObject var locationManager: LocationManager
     @State private var showLocationDeniedAlert = false
-    
+    @State private var manualSunriseTime = Calendar.current.date(from: DateComponents(hour: 7, minute: 0)) ?? Date()
+    @State private var showManualPicker = false
+
     var body: some View {
         VStack(spacing: 30) {
             Image(systemName: "location.fill")
                 .font(.system(size: 80))
                 .foregroundColor(Color("BrandOrange"))
-            
-            Text("Location for Sunrise")
+
+            Text("Sunrise Time")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-            
+
             VStack(spacing: 12) {
-                Text("We need your location to calculate sunrise times for your automatic wake schedule.")
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-                
-                Text("Without location access, we can't determine when sunrise occurs in your area.")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                Text("Allow location to automatically calculate sunrise, or set it manually.")
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
             }
-            
+
             if locationManager.authorizationStatus == .authorizedWhenInUse {
                 HStack {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.green)
-                    Text("Location access granted")
+                    Text("Using location-based sunrise")
                         .foregroundColor(.green)
                 }
                 .padding()
                 .background(Color.green.opacity(0.1))
                 .cornerRadius(8)
-            } else if locationManager.authorizationStatus == .denied {
-                VStack(spacing: 16) {
-                    Text("Location access was denied")
-                        .foregroundColor(.red)
-                        .fontWeight(.medium)
-                    
-                    Button("Open Settings") {
-                        if let url = URL(string: UIApplication.openSettingsURLString) {
-                            UIApplication.shared.open(url)
+            } else {
+                VStack(spacing: 20) {
+                    // Location access button (if not denied)
+                    if locationManager.authorizationStatus != .denied {
+                        Button(action: {
+                            locationManager.requestLocation()
+                        }) {
+                            Text("Use Location for Sunrise")
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color("BrandOrange"))
+                                .cornerRadius(12)
+                        }
+                        .padding(.horizontal)
+
+                        Text("OR")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+
+                    // Manual sunrise picker
+                    VStack(spacing: 12) {
+                        Text("Set Sunrise Time Manually:")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+
+                        DatePicker("", selection: $manualSunriseTime, displayedComponents: .hourAndMinute)
+                            .datePickerStyle(WheelDatePickerStyle())
+                            .labelsHidden()
+                            .frame(height: 100)
+                            .background(Color.white.opacity(0.1))
+                            .cornerRadius(12)
+                            .padding(.horizontal)
+                            .onChange(of: manualSunriseTime) { _, _ in
+                                saveManualSunriseTime()
+                            }
+
+                        Text("Sunrise: \(manualSunriseTime.formatted(date: .omitted, time: .shortened))")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+
+                    // Settings link for denied location
+                    if locationManager.authorizationStatus == .denied {
+                        Button(action: {
+                            if let url = URL(string: UIApplication.openSettingsURLString) {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
+                            Text("Enable Location in Settings")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                                .underline()
                         }
                     }
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color("BrandOrange"))
-                    .cornerRadius(12)
-                    .padding(.horizontal)
-                    
-                    Text("Please enable location access in Settings to calculate accurate sunrise times")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
                 }
-            } else {
-                Button(action: {
-                    locationManager.requestLocation()
-                }) {
-                    Text("Allow Location Access")
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color("BrandOrange"))
-                        .cornerRadius(12)
-                }
-                .padding(.horizontal)
-                
-                Text("Location access is required to continue")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 8)
             }
-            
+
             Spacer()
         }
         .padding()
+        .onAppear {
+            loadManualSunriseTime()
+        }
+    }
+
+    private func saveManualSunriseTime() {
+        let userDefaults = UserDefaults(suiteName: "group.com.sunbreak.shared")
+        userDefaults?.set(manualSunriseTime, forKey: "manualSunriseTime")
+        userDefaults?.set(true, forKey: "useManualSunrise")
+    }
+
+    private func loadManualSunriseTime() {
+        let userDefaults = UserDefaults(suiteName: "group.com.sunbreak.shared")
+        if let savedTime = userDefaults?.object(forKey: "manualSunriseTime") as? Date {
+            manualSunriseTime = savedTime
+        }
     }
 }
 
